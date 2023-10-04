@@ -2,23 +2,29 @@
 
 
 int main(int argc, char** argv) {
-    cfHelper cfhelper;  // create a cfHelper object
+    cfHelper cf;  // create a cfHelper object
 
     // read the arguments
     if (argc == 1) {
-        cfhelper.help();
+        cf.help();
         exit(-1);
     }
     for (int i = 1; i < argc; i++) {
         if (!strcmp(argv[i], "--help") || !strcmp(argv[i], "-h")) {
-            cfhelper.help();
+            cf.help();
+        }
+        else if (!strcmp(argv[i], "-g") || !strcmp(argv[i], "gen")) {
+            cf.genCode(argv[i + 1]);
+        }
+        else if (!strcmp(argv[i], "user-info")) {
+            cf.getUserInfo();
         }
         else if (!strcmp(argv[i], "test")) {
             if(argv[i + 1][0] >= 'A') {
-                cfhelper.test(argv[i + 1]);
+                cf.test(argv[i + 1]);
             }
             else {
-                cfhelper.error("Wrong Input!");
+                cf.error("Wrong Input!");
             }
         }
     }

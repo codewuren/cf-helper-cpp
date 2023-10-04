@@ -5,6 +5,8 @@
 #include <string>
 #include <cstring>
 #include <iostream>
+#include <vector>
+#include <fstream>
 
 class cfHelper {
 public:
@@ -15,6 +17,8 @@ public:
     void help();
     void test(std::string str);
     void error(std::string str);
+    void genCode(std::string fn);
+    void getUserInfo();
 private:
 };
 
