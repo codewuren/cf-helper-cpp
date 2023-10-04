@@ -11,6 +11,7 @@ public:
     cfHelper() {};
     ~cfHelper() {};
 public:
+    // some functions
     void help();
     void test(std::string str);
     void error(std::string str);

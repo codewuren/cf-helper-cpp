@@ -2,7 +2,9 @@
 
 
 int main(int argc, char** argv) {
-    cfHelper cfhelper;
+    cfHelper cfhelper;  // create a cfHelper object
+
+    // read the arguments
     if (argc == 1) {
         cfhelper.help();
         exit(-1);
@@ -20,5 +22,6 @@ int main(int argc, char** argv) {
             }
         }
     }
+
     return 0;
 }
