@@ -94,7 +94,3 @@ void cfHelper::genCode(std::string testname) {
     std::string filename = testname + ".cpp";
     writeFile(filename, file_content);
 }
-
-void cfHelper::getUserInfo() {
-    // TODO
-}

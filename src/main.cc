@@ -16,9 +16,6 @@ int main(int argc, char** argv) {
         else if (!strcmp(argv[i], "-g") || !strcmp(argv[i], "gen")) {
             cf.genCode(argv[i + 1]);
         }
-        else if (!strcmp(argv[i], "user-info")) {
-            cf.getUserInfo();
-        }
         else if (!strcmp(argv[i], "test")) {
             if(argv[i + 1][0] >= 'A') {
                 cf.test(argv[i + 1]);

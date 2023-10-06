@@ -1,7 +1,7 @@
 # CF-Helper
 
 ## Introducion
-CF-Helper is a command-line CodeForces helper that could help you do many things more easier.
+CF-Helper is a command-line tool that help you generate youer code and test them to reduce your work.
 
 ## Installation
 Use the command under to install cf-helper
