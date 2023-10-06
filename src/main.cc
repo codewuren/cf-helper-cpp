@@ -24,7 +24,7 @@ int main(int argc, char** argv) {
                 cf.test(argv[i + 1]);
             }
             else {
-                cf.error("Wrong Input!");
+                cf.error("Wrong Input!", true);
             }
         }
     }

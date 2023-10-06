@@ -16,8 +16,11 @@ public:
     // some functions
     void help();
     void test(std::string str);
-    void error(std::string str);
-    void genCode(std::string fn);
+    void error(std::string str, bool exit_yon);
+    void genCode(std::string testname);
+    void readFile(std::vector<std::string>& vec, std::string filename);
+    void readFile(std::string* str, std::string filename);
+    void writeFile(std::string filename, std::vector<std::string> vec);
     void getUserInfo();
 private:
 };
