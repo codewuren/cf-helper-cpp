@@ -2,7 +2,7 @@
 
 
 int main(int argc, char** argv) {
-    cfHelper cf;  // create a cfHelper object
+    cwr::tools::cfHelper cf;  // create a cfHelper object
 
     // read the arguments
     if (argc == 1) {
