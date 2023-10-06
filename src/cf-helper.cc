@@ -49,7 +49,7 @@ void cfHelper::writeFile(std::string filename, std::vector<std::string> vec) {
     ofs.close();
 }
 
-// warn some errors
+// warn a error and exit if exit_yon is true
 void cfHelper::error(std::string str, bool exit_yon) {
     std::cout << str << std::endl;
     if (exit_yon) {
@@ -59,9 +59,7 @@ void cfHelper::error(std::string str, bool exit_yon) {
 
 // compile the source code and run
 void cfHelper::test(std::string str) {
-    std::string com = "g++ ";
-    std::string fn = str + ".cpp";
-    com += fn + " --std=c++11 -O2 -o " + str + " && ./" + str;
+    std::string com = "g++ " + str + ".cpp" + " --std=c++11 -O2 -o " + str + " && ./" + str;
     std::cout << com << std::endl;
     int ret = system(com.c_str());
     if (ret) {
@@ -84,6 +82,9 @@ void cfHelper::genCode(std::string testname) {
     // get the full-name of the template file
     std::string template_path = user_home + "/.config/cf-helper/template";
     std::cout << "template file located in " << template_path << std::endl;
+
+    // delete user_home.txt
+    system("rm user_home.txt");
 
     // get the content of the template file
     std::vector<std::string> file_content;
